@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+  font-family: Raleway;
+}
+
+.Card {
+   width: 300px;
+}

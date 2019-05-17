@@ -1,0 +1,40 @@
+.AddPostIt {
+  font-family: Raleway;
+}
+
+.AddPostIdForm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.AddPostIt button {
+  background-color: midnightblue;
+  border: none;
+  border-radius: 12px;
+  color:white;
+  padding: 10px;
+  font-family: Raleway;
+}
+
+.AddPostIt button:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px darkgoldenrod;
+}
+
+.AddPostIt input {
+  border-bottom: 1px solid #888;
+  border: 1px solid #888;
+  border-radius: 12px;
+  font-family: Raleway;
+  padding: 10px 15px;
+}
+
+.AddPostIt input:focus {
+  outline: none;
+  border-color: darkgoldenrod;
+}
+
+.AddPostIt span {
+  margin: 5px 5px 0px 5px;
+}
