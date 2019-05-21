@@ -4,7 +4,7 @@ import './Content.css'
 
 const Content = props => (
   <div className="Content">
-  {props.children}
+    {props.children}
   </div>
 )
 

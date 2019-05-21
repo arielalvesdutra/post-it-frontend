@@ -13,6 +13,7 @@
   border: none;
   border-radius: 12px;
   color:white;
+  font-size: 0.9em;
   padding: 10px;
   font-family: Raleway;
 }
@@ -27,6 +28,7 @@
   border: 1px solid #888;
   border-radius: 12px;
   font-family: Raleway;
+  font-size: 0.9em;
   padding: 10px 15px;
 }
 
