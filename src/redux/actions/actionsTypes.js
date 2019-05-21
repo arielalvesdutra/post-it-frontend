@@ -1,1 +1,2 @@
+export const LOADING_POST_ITS = 'LOADING_POST_ITS'
 export const SET_POST_ITS = 'SET_POST_ITS'

@@ -5,6 +5,13 @@
   margin-left: 10px;
 }
 
+.SearchBar-Form {
+  display: flex;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
 .Search-Icon {  
   align-items: center;
   display: flex;

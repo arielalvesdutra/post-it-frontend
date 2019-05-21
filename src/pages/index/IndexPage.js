@@ -32,7 +32,12 @@ class IndexPage extends Component {
             {this.props.isLoading && (
               <ClipLoader />
             )}
-            {postIts.length > 0 && postIts.map((postIt, key) => (
+            {!this.props.isLoading && !postIts.length && (
+              <div className="not-found-records">
+                <strong>Nenhum registro encontrado.</strong>
+              </div>
+            )}
+            {postIts.length > 0 && !this.props.isLoading && postIts.map((postIt, key) => (
               <PostIt title={postIt.title}
                 description={postIt.description}
                 key={key} />

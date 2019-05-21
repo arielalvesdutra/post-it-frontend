@@ -1,4 +1,5 @@
 import {
+  LOADING_POST_ITS,
   SET_POST_ITS
 } from './actionsTypes'
 
@@ -21,6 +22,26 @@ export const fetchPostIts = () => {
   return dispatch => {
 
     axios.get('/post-its')
+      .then(response => {
+        const data = response.data
+        dispatch(setPostIts(data))
+      })
+      .catch(error => error)
+  }
+}
+
+export const loadingPostIts = () => {
+  return  {
+    type: LOADING_POST_ITS
+  }
+}
+
+export const searchPostIts = title => {
+  return dispatch => {
+
+    dispatch(loadingPostIts())
+    
+    axios.get(`/search/post-its/f?title=${title}`)
       .then(response => {
         const data = response.data
         dispatch(setPostIts(data))
