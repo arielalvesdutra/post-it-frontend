@@ -39,6 +39,7 @@ class IndexPage extends Component {
             )}
             {postIts.length > 0 && !this.props.isLoading && postIts.map((postIt, key) => (
               <PostIt title={postIt.title}
+                id={postIt.id}
                 description={postIt.description}
                 key={key} />
             ))

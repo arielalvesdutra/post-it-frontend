@@ -28,6 +28,9 @@
 }
 
 .Search-Button {
+  color: lightyellow; 
+  color: wheat; 
+  color: wheat; 
   background-color: orange;
   border: none;
   border-radius: 12px;
@@ -44,6 +47,7 @@
   border: none;
   border-radius: 12px;
   font-family: Raleway;
+  font-size: 0.9em;
   padding: 10px 15px;
   width: 100%;
 }

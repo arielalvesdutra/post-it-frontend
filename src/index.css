@@ -14,3 +14,7 @@ body {
 .Card {
    width: 300px;
 }
+
+button {
+  cursor: pointer;
+}

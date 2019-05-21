@@ -1,3 +1,23 @@
 .Post-It {
   margin: 10px 3px;
 }
+
+.Post-It-Action-Container {
+  padding: 0px 6px 3px 5px;
+  color: transparent;
+  text-align: right;
+}
+
+.Post-It-Action-Container button {
+  color: transparent;
+  background-color:  transparent;
+  border: none;
+}
+
+.Post-It-Action-Container button:focus{
+  outline: none;
+}
+
+.Post-It:hover button {
+  color: #333;
+}

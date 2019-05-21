@@ -17,6 +17,17 @@ export const createPostIt = (postIt) => {
   }
 }
 
+export const deletePostIt = id => {
+  return dispatch => {
+    
+    dispatch(loadingPostIts())
+
+    axios.delete(`/post-its/${id}`)
+      .then(response => dispatch(fetchPostIts()))
+      .catch(error => error)
+  }
+}
+
 export const fetchPostIts = () => {
 
   return dispatch => {
