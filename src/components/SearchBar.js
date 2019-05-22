@@ -22,7 +22,7 @@ class SearchBar extends Component {
         <div className="SearchBar">
           <span className="SearchBar-Input">
             <input type="text" name="title"
-              className="Search-Input" placeholder="Pesquisar..." />
+              className="Search-Input" placeholder="Pesquisar pelo título..." />
           </span>
           <span className="SearchBar-Button ">
             <button className="Search-Button">
