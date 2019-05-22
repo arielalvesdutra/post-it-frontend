@@ -12,7 +12,13 @@ const style = {
   backgroundColor: 'gold'
 }
 
-// Ajustar o hover do button, para aparecer o passar por cima do Card
+const PostItCardAction = ({ id, onDeletePostIt }) => (
+  <div className="Post-It-Action-Container">
+  <button type="submit" title="Excluir post-it" onClick={() => onDeletePostIt(id)}>
+    <FontAwesomeIcon icon={faTrashAlt} size="lg" />
+  </button>
+</div>
+)
 
 const PostIt = ({ id, description, title, onDeletePostIt }) => (
   <div className="Post-It">
@@ -25,11 +31,7 @@ const PostIt = ({ id, description, title, onDeletePostIt }) => (
           {description}
         </Typography>
       </CardContent>
-      <div className="Post-It-Action-Container">
-        <button title="Excluir post-it" onClick={() => onDeletePostIt(id)}>
-          <FontAwesomeIcon icon={faTrashAlt} size="lg" />
-        </button>
-      </div>
+      <PostItCardAction id={id} onDeletePostIt={onDeletePostIt} />
     </Card>
   </div>
 )

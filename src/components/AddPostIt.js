@@ -46,11 +46,11 @@ class AddPostIt extends Component {
         <form onSubmit={this.handleForm}>
           <div className="AddPostIdForm">
             <span>
-              <input name="title" type="text" placeholder="Título do Post-It" />
+              <input name="title" type="text" placeholder="Título do Post-It" required/>
             </span>
             <span>
               <input name="description" type="text" maxLength="500"
-                placeholder="Descrição do Post-It" />
+                placeholder="Descrição do Post-It" required />
             </span>
             <span>
               <button>
