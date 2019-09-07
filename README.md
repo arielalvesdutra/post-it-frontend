@@ -16,7 +16,7 @@ $ npm i
 
 Configurar o ambiente do backend com o passa a passo [aqui](https://github.com/arielalvesdutra/post-it-backend).
 
-Depois de configurar o backend, é preciso apontar o endereço do backend no arquivo `src/axios.js` do frontend.
+Depois de configurar o backend, é preciso renomear o arquivo `.env-example` para `.env` e apontar o endereço do backend na variavel `REACT_APP_BACKEND_URL`.
 
 3 - NPM start
 
