@@ -8,6 +8,9 @@ import axios from '../../axios'
 export const createPostIt = (postIt) => {
 
   return dispatch => {
+
+    dispatch(loadingPostIts())
+
     axios.post('/post-its', {
       title: postIt.title,
       description: postIt.description    
@@ -52,7 +55,7 @@ export const searchPostIts = title => {
 
     dispatch(loadingPostIts())
     
-    axios.get(`/search/post-its/f?title=${title}`)
+    axios.get(`/post-its?title=${title}`)
       .then(response => {
         const data = response.data
         dispatch(setPostIts(data))
@@ -61,9 +64,9 @@ export const searchPostIts = title => {
   }
 }
 
-export const setPostIts = postIts => {
+export const setPostIts = data => {
   return {
     type: SET_POST_ITS,
-    postIts: postIts
+    data: data
   }
 }

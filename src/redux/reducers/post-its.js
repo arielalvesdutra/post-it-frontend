@@ -5,7 +5,10 @@ import {
 
 let initialState = {
   postIts: [],
-  isLoading:  true
+  isLoading:  true,
+  currentPage: 1,
+  totalItems: 0,
+  itemsPerPage: 30
 }
 
 export default (state = initialState, action) => {
@@ -20,7 +23,10 @@ export default (state = initialState, action) => {
     case SET_POST_ITS: {
       return {
         ...state,
-        postIts: action.postIts,
+        postIts: action.data.records,
+        currentPage: action.data.currentPage,
+        totalItems: action.data.totalItems,
+        itemsPerPage: action.data.itemsPerPage,
         isLoading: false
       }
     }
