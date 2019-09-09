@@ -16,7 +16,7 @@
 }
 
 .pagination li a {
-  color: #337ab7;
+  color: darkgoldenrod;
   outline: none;
   text-decoration: none;
   padding: 6px 12px;
@@ -24,10 +24,12 @@
 } 
 
 .pagination li.active {
-  background-color: #337ab7;
+  background-color: darkgoldenrod;
 }
 
 .pagination li.active a {
+  border: none;
+  box-sizing: content-box;
   color: #FFFFFF;
 }
 
