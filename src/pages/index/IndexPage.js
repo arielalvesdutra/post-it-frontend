@@ -5,6 +5,7 @@ import HeaderContainer from '../../containers/Header'
 import ContentContainer from '../../containers/Content'
 
 import PostIt from '../../components/PostIt'
+import Pagination from '../../components/Pagination'
 import AddPostIt from '../../components/AddPostIt'
 
 import './IndexPage.css'
@@ -45,6 +46,7 @@ class IndexPage extends Component {
             ))
             }
           </div>
+          <Pagination />
         </ContentContainer>
       </Fragment>
     )
@@ -57,10 +59,12 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const mapStateToProps = ({ postIts, isLoading }) => {
+const mapStateToProps = ({ postIts, isLoading, itemsPerPage, totalItems }) => {
   return {
     postIts,
-    isLoading
+    isLoading,
+    itemsPerPage,
+    totalItems
   }
 }
 

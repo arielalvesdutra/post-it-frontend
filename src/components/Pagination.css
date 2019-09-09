@@ -1,0 +1,45 @@
+.Pagination {
+  margin-top: 25px;
+  margin-bottom: 15px;
+
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.pagination li {
+  display: flex; 
+}
+
+.pagination li a {
+  color: #337ab7;
+  outline: none;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+} 
+
+.pagination li.active {
+  background-color: #337ab7;
+}
+
+.pagination li.active a {
+  color: #FFFFFF;
+}
+
+.pagination li.disabled a {
+  cursor: not-allowed;
+}
+
+.pagination li:not(.active):not(.disabled) a:hover {
+  background-color: #eee;
+}
+
+.pagination li:not(.disabled) a {
+  cursor: pointer;
+}
+
