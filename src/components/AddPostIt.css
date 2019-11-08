@@ -1,5 +1,6 @@
 .AddPostIt {
   font-family: Raleway;
+  width: 100%;
 }
 
 .AddPostIdForm {
@@ -9,24 +10,30 @@
 }
 
 .AddPostIt button {
-  background-color: midnightblue;
+  background-color: #0b294d;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   color:white;
-  font-size: 0.9em;
-  padding: 10px;
   font-family: Raleway;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: background-color 0.5s;
 }
 
 .AddPostIt button:focus {
   outline: none;
-  box-shadow: 0 0 0 1px darkgoldenrod;
+  box-shadow: 0 0 0 2px darkgoldenrod;
+}
+
+.AddPostIt button:hover {
+  background-color: #1152a7;
 }
 
 .AddPostIt input {
   border-bottom: 1px solid #888;
   border: 1px solid #888;
-  border-radius: 12px;
+  border-radius: 8px;
   font-family: Raleway;
   font-size: 0.9em;
   padding: 10px 15px;

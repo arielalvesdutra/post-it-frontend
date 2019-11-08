@@ -3,9 +3,9 @@ import React from 'react'
 import './Content.css'
 
 const Content = props => (
-  <div className="Content">
+  <main className="Content">
     {props.children}
-  </div>
+  </main>
 )
 
 export default Content

@@ -21,3 +21,9 @@
 .Post-It:hover button {
   color: #333;
 }
+
+@media(max-width: 646px) {
+  .Post-It button {
+    color: #333;
+  }
+}

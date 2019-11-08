@@ -20,7 +20,7 @@ class Pagination extends Component {
   render() {
 
     return (
-      <div className="Pagination">
+      <section className="Pagination">
 
         {this.props.postIts.length > 0 && this.props.isLoading === false && (
           <PaginationHelper
@@ -32,7 +32,7 @@ class Pagination extends Component {
           />
         )}
         
-      </div>
+      </section>
     )
   }
 }

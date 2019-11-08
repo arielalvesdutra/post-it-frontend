@@ -6,7 +6,7 @@ import './Header.css'
 import SearchBar from '../components/SearchBar'
 
 const Header = props => (
-  <div className="Header">
+  <header className="Header">
     <span className="Header-Logo">
       <span className="Header-Logo-Icon">
         <FontAwesomeIcon icon={faStickyNote} size="3x" />
@@ -16,7 +16,7 @@ const Header = props => (
       </span>
     </span>
     <SearchBar />
-  </div>
+  </header>
 )
 
 export default Header

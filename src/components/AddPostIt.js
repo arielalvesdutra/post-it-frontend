@@ -42,14 +42,16 @@ class AddPostIt extends Component {
   render() {
 
     return (
-      <div className="AddPostIt">
+      <section className="AddPostIt">
         <form onSubmit={this.handleForm}>
           <div className="AddPostIdForm">
             <span>
-              <input name="title" type="text" placeholder="Título do Post-It" required/>
+              <input name="title" type="text" placeholder="Título do Post-It" 
+                  id="title" title="Preencha o título. Atalho: Crtl+d" required/>
             </span>
             <span>
               <input name="description" type="text" maxLength="500"
+                title="Preencha a descrição do Post-It"
                 placeholder="Descrição do Post-It" required />
             </span>
             <span>
@@ -60,7 +62,7 @@ class AddPostIt extends Component {
           </div>
         </form>
         <Bar />
-      </div>
+      </section>
     )
   }
 }

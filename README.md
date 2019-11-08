@@ -2,7 +2,7 @@
 
 Projeto para cadastrar, pesquisar ou remover cards que representam Post-Its.
 
-![association graph](src/assets/imgs/v0-2-0.jpg)
+![association graph](src/assets/imgs/v0-3-0.png)
 
 # Instalação e uso
 
@@ -37,3 +37,10 @@ Link [aqui](https://github.com/arielalvesdutra/post-it-backend).
 - Material UI
 - React DOM
 - Redux
+
+
+# Atalhos de teclado
+
+`Crtl + e`: foca no input de buscas de post-its pelo título.
+
+`Ctrl + d`: foca no input de título para cadastrar um post-it.

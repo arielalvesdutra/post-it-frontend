@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ClipLoader } from 'react-spinners'
 import HeaderContainer from '../../containers/Header'
@@ -23,13 +23,11 @@ class IndexPage extends Component {
     const postIts = this.props.postIts
 
     return (
-      <Fragment>
+      <>
         <HeaderContainer />
         <ContentContainer>
-          <div>
-            <AddPostIt />
-          </div>
-          <div className="post-its-container">
+          <AddPostIt />
+          <section className="post-its-container">
             {this.props.isLoading && (
               <ClipLoader />
             )}
@@ -45,10 +43,10 @@ class IndexPage extends Component {
                 key={key} />
             ))
             }
-          </div>
+          </section>
           <Pagination />
         </ContentContainer>
-      </Fragment>
+      </>
     )
   }
 }
