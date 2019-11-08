@@ -1,6 +1,10 @@
 {
   "name": "post-it-frontend",
-  "version": "0.2.0",
+  "author": {
+    "name": "Ariel Alves Dutra", 
+    "email": "alves.lsn@gmail.com"
+  },
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",

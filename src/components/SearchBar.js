@@ -21,8 +21,9 @@ class SearchBar extends Component {
       <form className="SearchBar-Form" onSubmit={this.handleSubmit}>
         <div className="SearchBar">
           <span className="SearchBar-Input">
-            <input type="text" name="title"
-              className="Search-Input" placeholder="Pesquisar pelo título..." />
+            <input type="text" name="title" id="search" className="Search-Input" 
+              title="Pesquise pelo título. Atalho: Crtl+e"  
+              placeholder="Pesquisar pelo título..." />
           </span>
           <span className="SearchBar-Button ">
             <button className="Search-Button">
