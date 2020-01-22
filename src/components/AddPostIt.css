@@ -1,18 +1,24 @@
-.AddPostIt {
+.addPostIt {
   font-family: Raleway;
   width: 100%;
+  box-sizing: border-box;
 }
 
-.AddPostIdForm {
+.addPostIt__form {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  box-sizing: border-box;
 }
 
-.AddPostIt button {
-  background-color: #0b294d;
+.addPostIt__span {
+  margin: 10px 5px 0px 5px;
+}
+
+.addPostIt button {
+  background-color: orange;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   color:white;
   font-family: Raleway;
   font-size: 0.9em;
@@ -21,29 +27,42 @@
   transition: background-color 0.5s;
 }
 
-.AddPostIt button:focus {
+.addPostIt button:focus {
   outline: none;
   box-shadow: 0 0 0 2px darkgoldenrod;
 }
 
-.AddPostIt button:hover {
-  background-color: #1152a7;
+.addPostIt button:hover {
+  background-color: rgb(207, 211, 0);
 }
 
-.AddPostIt input {
-  border-bottom: 1px solid #888;
-  border: 1px solid #888;
-  border-radius: 8px;
+.addPostIt input {
   font-family: Raleway;
   font-size: 0.9em;
   padding: 10px 15px;
+  border: 1px solid #b9b7b7;
+  border-radius: 4px;
 }
 
-.AddPostIt input:focus {
+.addPostIt input:focus {
   outline: none;
   border-color: darkgoldenrod;
 }
 
-.AddPostIt span {
-  margin: 5px 5px 0px 5px;
+@media(max-width: 570px) {
+  .addPostIt__form {
+    flex-direction: column;
+  }
+
+  .addPostIt__span {
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .addPostIt input {
+    flex: 1;
+    box-sizing: border-box;
+  }
 }

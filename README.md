@@ -2,7 +2,7 @@
 
 Projeto para cadastrar, pesquisar ou remover cards que representam Post-Its.
 
-![association graph](src/assets/imgs/v0-3-0.png)
+![association graph](src/assets/imgs/v0-4-0.png)
 
 # Instalação e uso
 

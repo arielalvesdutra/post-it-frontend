@@ -1,7 +1,6 @@
-.Pagination {
+.paginationn {
   margin-top: 25px;
   margin-bottom: 15px;
-
   text-align: center;
 }
 
@@ -9,6 +8,7 @@
   display: flex;
   justify-content: center;
   list-style: none;
+  border-radius: 4px;
 }
 
 .pagination li {

@@ -1,63 +1,68 @@
-.SearchBar {
-  display: flex;
+.searchBar {
   flex: 1;
   justify-content: center;
-  margin-left: 10px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.SearchBar-Form {
+.searchBar__form {
   display: flex;
   flex: 1;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
-.Search-Icon {  
-  align-items: center;
-  display: flex;
-  margin: 0px 0px 0px 15px;
-}
-
-.SearchBar-Button {
-  margin: 0px 20px 0px 10px;
-}
-
-.SearchBar-Input {
+.searchBar__input {
   display: flex;
   flex: 2;
+  border: none;
+  border-radius: 4px;
+  font-family: Raleway;
+  font-size: 0.9em;
+  padding: 10px 15px;
+  width: 100%;
+  min-width: 100px;
 }
 
-.Search-Button {
-  color: lightyellow; 
-  color: wheat; 
+.searchBar__input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px orange;
+}
+
+.searchBar__button {
+  color: lightyellow;
   color: wheat; 
   background-color: orange;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   color:white;
   padding: 10px;
   transition: background-color 0.7s;
 }
 
-.Search-Button:hover {
+.searchBar__button:hover {
   background-color: rgb(207, 211, 0);
 }
 
-.Search-Button:focus {
+.searchBar__button:focus {
   outline: none;
   box-shadow: 0 0 0 2px white;
 }
 
-.Search-Input {
-  border: none;
-  border-radius: 8px;
-  font-family: Raleway;
-  font-size: 0.9em;
-  padding: 10px 15px;
-  width: 100%;
+.searchBar__inputSpan,
+.searchBar__buttonSpan {
+  margin: 0 0 0 10px;
+  display: flex;
 }
 
-.Search-Input:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px orange;
+.searchBar__inputSpan {
+  flex: 1;
+}
+
+@media(max-width: 359px) {
+  .searchBar__inputSpan {
+    margin: 0 0 10px 10px;
+  }
 }

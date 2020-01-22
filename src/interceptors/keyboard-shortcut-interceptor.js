@@ -5,11 +5,11 @@ const focusOnTitleInput = () => {
   document.getElementById("title").focus()
 }
 
-const focusOnSearchInput = () => {
-  document.getElementById("search").focus()
+const focusOnSearchTitleInput = () => {
+  document.getElementById("search-title").focus()
 }
 
-const isSearchShortcutEvent = event => {
+const isSearchTitleShortcutEvent = event => {
   return event.ctrlKey && SEARCH_INPUT_SHORTCUT_KEY === event.key
 }
 
@@ -19,7 +19,7 @@ const isTitleShortcutEvent = event => {
 
 const preventUnwantedControlKeyDownEvents = () => {
   document.addEventListener('keydown', event => {
-    if (isSearchShortcutEvent(event) || isTitleShortcutEvent(event)) {
+    if (isSearchTitleShortcutEvent(event) || isTitleShortcutEvent(event)) {
       event.preventDefault()
     }
   })
@@ -32,8 +32,8 @@ const captureWantedKeyDownEvents = () => {
       return
     }
 
-    if (isSearchShortcutEvent(event)) {
-      focusOnSearchInput()
+    if (isSearchTitleShortcutEvent(event)) {
+      focusOnSearchTitleInput()
       return
     }
   })

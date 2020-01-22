@@ -1,20 +1,18 @@
-.Header {
+.header {
   width: 100%;
   align-items: center;
   background-color: darkgoldenrod;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   font-weight: bold;
-  height: 80px;
-  margin-bottom: 20px;
+  min-height: 80px;
+  margin-bottom: 10px;
 }
 
-.Header-Logo {
-  align-items: center;
-  display: flex;
-  margin-right: 10px;
-}
 
-.Header-Logo-Icon {
-  padding: 0px 10px;
+@media(max-width: 750px) {
+  .header {
+    flex-direction: column;
+  }
 }

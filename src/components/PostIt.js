@@ -1,28 +1,28 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { Card, CardContent, Typography } from '@material-ui/core'
-
+import { deletePostIt } from '../redux/actions/postItsActions';
 import './PostIt.css'
-import { deletePostIt } from '../redux/actions/post-its';
 
 const style = {
   color: '#333',
-  backgroundColor: 'gold'
+  backgroundColor: 'gold',
+  boxShadow: '0 0 0'
 }
 
 const PostItCardAction = ({ id, onDeletePostIt }) => (
-  <div className="Post-It-Action-Container">
-  <button type="submit" title="Excluir post-it" onClick={() => onDeletePostIt(id)}>
-    <FontAwesomeIcon icon={faTrashAlt} size="lg" />
-  </button>
-</div>
+  <div className="postIt__actionContainer">
+    <button type="submit" title="Excluir post-it" onClick={() => onDeletePostIt(id)}>
+      <FontAwesomeIcon icon={faTrash} size="lg" />
+    </button>
+  </div>
 )
 
 const PostIt = ({ id, description, title, onDeletePostIt }) => (
-  <div className="Post-It">
-    <Card className="Card" elevation={3} style={style}>
+  <div className="postIt">
+    <Card className="Card"  style={style}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2" style={style} >
           {title}
