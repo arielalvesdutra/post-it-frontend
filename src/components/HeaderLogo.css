@@ -1,0 +1,18 @@
+.headerLogo {
+  align-items: center;
+  display: flex;
+  margin-right: 10px;
+}
+
+.headerLogo__icon {
+  padding: 0px 10px;
+}
+
+@media(max-width: 750px) {
+  .headerLogo {
+    flex: 2;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+  }
+}

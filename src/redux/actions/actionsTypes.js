@@ -1,7 +1,6 @@
 export const LOADING_POST_ITS = 'LOADING_POST_ITS'
+export const LOAD_FINISH = 'LOAD_FINISH'
 export const SET_POST_ITS = 'SET_POST_ITS'
-
-export const SET_TITLE_FILTER = 'SET_TITLE_FILTER'
 export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
-
+export const SET_FILTERS = 'SET_FILTERS'
 export const CLEAR_FILTERS = 'CLEAR_FILTERS'

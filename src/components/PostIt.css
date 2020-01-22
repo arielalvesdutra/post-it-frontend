@@ -1,29 +1,29 @@
-.Post-It {
+.postIt {
   margin: 10px 3px;
 }
 
-.Post-It-Action-Container {
+.postIt__actionContainer {
   padding: 0px 6px 3px 5px;
   color: transparent;
   text-align: right;
 }
 
-.Post-It-Action-Container button {
+.postIt__actionContainer button {
   color: transparent;
   background-color:  transparent;
   border: none;
 }
 
-.Post-It-Action-Container button:focus{
+.postIt__actionContainer button:focus{
   outline: none;
 }
 
-.Post-It:hover button {
+.postIt:hover button {
   color: #333;
 }
 
 @media(max-width: 646px) {
-  .Post-It button {
+  .postIt button {
     color: #333;
   }
 }

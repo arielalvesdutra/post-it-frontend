@@ -1,54 +1,32 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { ClipLoader } from 'react-spinners'
 import HeaderContainer from '../../containers/Header'
 import ContentContainer from '../../containers/Content'
-
-import PostIt from '../../components/PostIt'
 import Pagination from '../../components/Pagination'
 import AddPostIt from '../../components/AddPostIt'
+import ListPostIts from '../../components/ListPostIts'
+import { fetchPostIts } from '../../redux/actions/postItsActions';
 
-import './IndexPage.css'
+const IndexPage = (props) => {
+  const { postIts, isLoading, onFetchPostIts} = props
 
-import { fetchPostIts } from '../../redux/actions/post-its';
+  useEffect(() => {
+    function onMount() {
+      onFetchPostIts()
+    }
+    onMount()
+  },[onFetchPostIts])
 
-class IndexPage extends Component {
-
-  componentDidMount = () => {
-    this.props.onFetchPostIts()
-  }
-
-  render() {
-
-    const postIts = this.props.postIts
-
-    return (
-      <>
-        <HeaderContainer />
-        <ContentContainer>
-          <AddPostIt />
-          <section className="post-its-container">
-            {this.props.isLoading && (
-              <ClipLoader />
-            )}
-            {!this.props.isLoading && !postIts.length && (
-              <div className="not-found-records">
-                <strong>Nenhum registro encontrado.</strong>
-              </div>
-            )}
-            {postIts.length > 0 && !this.props.isLoading && postIts.map((postIt, key) => (
-              <PostIt title={postIt.title}
-                id={postIt.id}
-                description={postIt.description}
-                key={key} />
-            ))
-            }
-          </section>
-          <Pagination />
-        </ContentContainer>
-      </>
-    )
-  }
+  return (
+    <>
+      <HeaderContainer />
+      <ContentContainer>
+        <AddPostIt />
+        <ListPostIts postIts={postIts} isLoading={isLoading} />
+        <Pagination />
+      </ContentContainer>
+    </>
+  )
 }
 
 const mapDispatchToProps = dispatch => {
@@ -66,6 +44,4 @@ const mapStateToProps = ({ postIts, isLoading, itemsPerPage, totalItems }) => {
   }
 }
 
-export default connect(
-  mapStateToProps, mapDispatchToProps
-)(IndexPage)
+export default connect(mapStateToProps, mapDispatchToProps)(IndexPage)

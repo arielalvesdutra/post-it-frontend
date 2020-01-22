@@ -1,4 +1,4 @@
-.post-its-container {
+.listPostIts {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -6,6 +6,3 @@
   justify-content: center;
 }
 
-.not-found-records {
-  margin-top: 40px;
-}

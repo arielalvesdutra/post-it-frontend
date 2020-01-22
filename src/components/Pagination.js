@@ -1,45 +1,40 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import PaginationHelper from "react-js-pagination";
-
+import { fetchPostIts, setCurrentPage } from '../redux/actions/postItsActions';
 import './Pagination.css'
-import { fetchPostIts, setCurrentPage } from '../redux/actions/post-its';
 
-class Pagination extends Component {
+const Pagination = (props) => {
 
-  changePage = selectedPage =>  {
-    this.forceUpdate()
-
-    let filters = this.props.filters
+  function changePage(selectedPage) {
+    const { onFetchPostIts, onSetCurrentPage } =  props
+    let { filters } = props
+    
     filters.page = selectedPage
 
-    this.props.onSetCurrentPage(selectedPage)
-    this.props.onFetchPostIts(filters)
+    onSetCurrentPage(selectedPage)
+    onFetchPostIts(filters)
   }
 
-  render() {
-
-    return (
-      <section className="Pagination">
-
-        {this.props.postIts.length > 0 && this.props.isLoading === false && (
-          <PaginationHelper
-            activePage={this.props.currentPage}
-            itemsCountPerPage={this.props.itemsPerPage}
-            totalItemsCount={this.props.totalItems}
-            pageRangeDisplayed={4}
-            onChange={this.changePage}
-          />
-        )}
-        
-      </section>
-    )
-  }
+  return (
+    <section className="paginationn">
+      {props.postIts.length > 0 && props.isLoading === false && (
+        <PaginationHelper 
+          activePage={props.currentPage}
+          itemsCountPerPage={props.itemsPerPage}
+          totalItemsCount={props.totalItems}
+          pageRangeDisplayed={4}
+          onChange={changePage}
+        />
+      )}
+    </section>
+  )
 }
 
-const mapStateToProps = ({ 
-      postIts, isLoading, itemsPerPage, totalItems, currentPage, filters
-    }) => {
+const mapStateToProps = (props) => {
+  const { postIts, isLoading, itemsPerPage, 
+    totalItems, currentPage, filters } = props
+
   return {
     currentPage,
     filters,

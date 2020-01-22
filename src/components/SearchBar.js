@@ -1,44 +1,47 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-
 import './SearchBar.css'
-import { searchPostIts } from '../redux/actions/post-its';
+import { fetchPostIts } from '../redux/actions/postItsActions';
 
-class SearchBar extends Component {
+const SearchBar = (props) => {
+  const { onFetchPostIts } = props
 
-  handleSubmit = event => {
+  function onSubmitSearchForm(event) {
     event.preventDefault()
     const title = event.target.title.value
-    this.props.onSearch(title)
+    const description = event.target.description.value
+    onFetchPostIts({ title, description})    
   }
 
-  render() {
-
-    return (
-      <form className="SearchBar-Form" onSubmit={this.handleSubmit}>
-        <div className="SearchBar">
-          <span className="SearchBar-Input">
-            <input type="text" name="title" id="search" className="Search-Input" 
-              title="Pesquise pelo título. Atalho: Crtl+e"  
-              placeholder="Pesquisar pelo título..." />
-          </span>
-          <span className="SearchBar-Button ">
-            <button className="Search-Button">
-              <FontAwesomeIcon icon={faSearch} size="1x" />
-            </button>
-          </span>
-        </div>
+  return (
+    <section className="searchBar">
+      <form onSubmit={onSubmitSearchForm} className="searchBar__form">
+        <span className="searchBar__inputSpan">
+          <input type="text" name="title" id="search-title" 
+              className="searchBar__input"
+              placeholder="Pesquisar pelo título..." 
+              title="Pesquise pelo o título. Atalho: Crtl+e"/>
+        </span>
+        <span className="searchBar__inputSpan">
+          <input type="text" name="description" id="search-description"
+              className="searchBar__input"
+              placeholder="Pesquisar pela descrição..."/>
+        </span>
+        <span className="searchBar__buttonSpan">
+          <button className="searchBar__button">
+            <FontAwesomeIcon icon={faSearch} size="1x" />
+          </button>
+         </span> 
       </form>
-    )
-  }
+    </section>
+  )
 }
 
 const mapToDispatch = dispatch => {
   return {
-    onSearch: (title) => dispatch(searchPostIts(title))
+    onFetchPostIts: (filters) => dispatch(fetchPostIts(filters))
   }
 }
 

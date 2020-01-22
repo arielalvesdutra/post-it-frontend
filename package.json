@@ -1,10 +1,10 @@
 {
   "name": "post-it-frontend",
   "author": {
-    "name": "Ariel Alves Dutra", 
+    "name": "Ariel Alves Dutra",
     "email": "alves.lsn@gmail.com"
   },
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
@@ -16,14 +16,14 @@
     "axios": "^0.18.1",
     "bootstrap": "^4.3.1",
     "i": "^0.3.6",
-    "npm": "^6.11.3",
+    "npm": "^6.13.4",
     "query-string": "^6.8.3",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-js-pagination": "^3.0.2",
     "react-redux": "^7.0.3",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3.3.0",
     "react-spinners": "^0.5.4",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"

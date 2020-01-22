@@ -1,9 +1,10 @@
 import {
   LOADING_POST_ITS,
   SET_POST_ITS,
-  SET_TITLE_FILTER,
   SET_CURRENT_PAGE,
-  CLEAR_FILTERS
+  CLEAR_FILTERS,
+  LOAD_FINISH,
+  SET_FILTERS
 } from '../actions/actionsTypes'
 
 let initialState = {
@@ -16,7 +17,6 @@ let initialState = {
 }
 
 export default (state = initialState, action) => {
-
   switch(action.type) {
     case CLEAR_FILTERS: {
       return {
@@ -30,13 +30,27 @@ export default (state = initialState, action) => {
         isLoading: true
       }
     }
+    case LOAD_FINISH: {
+      return {
+        ...state,
+        isLoading: false
+      }
+    }
     case SET_POST_ITS: {
       return {
         ...state,
-        postIts: action.data.records,
-        currentPage: action.data.currentPage,
-        totalItems: action.data.totalItems,
-        itemsPerPage: action.data.itemsPerPage,
+        postIts: action.data.records 
+          ? action.data.records 
+          : [],
+        currentPage: action.data.currentPage 
+          ? action.data.currentPage 
+          : 1,
+        totalItems: action.data.totalItems 
+          ? action.data.totalItems
+          : 0,
+        itemsPerPage: action.data.itemsPerPage
+          ? action.data.itemsPerPage
+          : 0,
         isLoading: false
       }
     }
@@ -46,15 +60,10 @@ export default (state = initialState, action) => {
         currentPage: action.currentPage
       }
     }
-    case SET_TITLE_FILTER: {
-
-      const filters = action.title
-          ? { title: action.title }
-          : { }
-
+    case SET_FILTERS: {
       return {
         ...state,
-        filters: filters
+        filters: action.filters
       }
     }
     default:

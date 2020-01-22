@@ -1,17 +1,12 @@
-import React, { Component } from 'react'
+import React  from 'react'
 import { connect } from 'react-redux'
+import { createPostIt } from '../redux/actions/postItsActions';
+import Bar from './Bar'
 import './AddPostIt.css'
-import { createPostIt } from '../redux/actions/post-its';
 
-const Bar = () => (
-  <div style={{
-    border: '1px solid darkgoldenrod', margin: '20px 0px'
-  }} />
-)
+const AddPostIt = (props) => {
 
-class AddPostIt extends Component {
-
-  handleForm = (event) => {
+  function handleForm (event) {
     event.preventDefault()
     const data = new FormData(event.target)
 
@@ -21,61 +16,41 @@ class AddPostIt extends Component {
     }
   
     try {
-      this.validadeForm(postIt)
-  
-      this.props.onCreatePostIt(postIt)
-    } catch (error) {
-  
-    }
+      validateForm(postIt)
+      props.onCreatePostIt(postIt)
+    } catch (error) { }
   }
 
-  validadeForm = postIt => {
-    if (!postIt.title) {
-      throw Error('É necessário preencher o título')
-    }
-  
-    if (!postIt.description) {
-      throw Error('É necessário preencher a descriaçao')
-    }
+  function validateForm(postIt) {
+    if (!postIt.title) throw Error('É necessário preencher o título')  
+    if (!postIt.description) throw Error('É necessário preencher a descriaçao')
   }
 
-  render() {
-
-    return (
-      <section className="AddPostIt">
-        <form onSubmit={this.handleForm}>
-          <div className="AddPostIdForm">
-            <span>
-              <input name="title" type="text" placeholder="Título do Post-It" 
-                  id="title" title="Preencha o título. Atalho: Crtl+d" required/>
-            </span>
-            <span>
-              <input name="description" type="text" maxLength="500"
-                title="Preencha a descrição do Post-It"
-                placeholder="Descrição do Post-It" required />
-            </span>
-            <span>
-              <button>
-                Cadastrar Post-It
-            </button>
-            </span>
-          </div>
-        </form>
-        <Bar />
-      </section>
-    )
-  }
+  return (
+    <section className="addPostIt">
+      <form onSubmit={handleForm} className="addPostIt__form">        
+          <span className="addPostIt__span">
+            <input name="title" type="text" placeholder="Título do Post-It" 
+                id="title" title="Preencha o título. Atalho: Crtl+d" required/>
+          </span>
+          <span className="addPostIt__span">
+            <input name="description" type="text" maxLength="500"
+              title="Preencha a descrição do Post-It"
+              placeholder="Descrição do Post-It" required />
+          </span>
+          <span className="addPostIt__span">
+            <button type="submit">Cadastrar Post-It</button>
+          </span>
+      </form>
+      <Bar />
+    </section>
+  )
 }
 
 const mapDispatchToProps = dispatch => {
-
   return {
     onCreatePostIt: (postIt) => dispatch(createPostIt(postIt))
   }
 }
 
-const mapStateToProps = (state) => {
-  return state
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AddPostIt)
+export default connect(null, mapDispatchToProps)(AddPostIt)
