@@ -1,10 +1,10 @@
 # Post-It Frontend
 
-Projeto para cadastrar, pesquisar ou remover cards que representam Post-Its.
+Project for create, search and remove cards that represents post-its.
 
 ![association graph](src/assets/imgs/v0-4-0.png)
 
-# Instalação e uso
+# Installation and use
 
 1 - NPM install:
 
@@ -14,13 +14,13 @@ $ npm i
 
 2 - Backend
 
-Configurar o ambiente do backend com o passa a passo [aqui](https://github.com/arielalvesdutra/post-it-backend).
+Set up backend environment with [this](https://github.com/arielalvesdutra/post-it-backend) step-by-step.
 
-Depois de configurar o backend, é preciso renomear o arquivo `.env-example` para `.env` e apontar o endereço do backend na variavel `REACT_APP_BACKEND_URL`.
+After the backend configuration, is necessary rename the `.env-example` file to `.env` and set backend URL in the variable `REACT_APP_BACKEND_URL`.
 
 3 - NPM start
 
-Com o `npm start`, a aplicação irá abrir no navegador e já poderá ser utilizada.
+Run `npm start` to start the application.
 
 ```bash
 $ npm start
@@ -28,9 +28,9 @@ $ npm start
 
 # Backend
 
-Link [aqui](https://github.com/arielalvesdutra/post-it-backend).
+Link [here](https://github.com/arielalvesdutra/post-it-backend).
 
-# Principais tecnologias utilizadas
+# Main technologies used
 
 - Axios
 - FontAwesome
@@ -38,9 +38,8 @@ Link [aqui](https://github.com/arielalvesdutra/post-it-backend).
 - React DOM
 - Redux
 
+# Keyboard shorcuts
 
-# Atalhos de teclado
+`Crtl + e`: focuses on input for post-its search by title.
 
-`Crtl + e`: foca no input de buscas de post-its pelo título.
-
-`Ctrl + d`: foca no input de título para cadastrar um post-it.
+`Ctrl + d`: focuses on input for post-its creation.
