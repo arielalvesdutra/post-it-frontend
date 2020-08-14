@@ -1,25 +1,29 @@
-const TITLE_INPUT_SHORTCUT_KEY = 'd'
-const SEARCH_INPUT_SHORTCUT_KEY = 'e'
-
-const focusOnTitleInput = () => {
-  document.getElementById("title").focus()
+const titleInput = {
+  id: 'title',
+  shortcut: 'd',
+  focus: function() { document.getElementById(this.id).focus()},
+  isShortcutEvent: function ({ event, isCaseSensitive = false}) {
+    if (isCaseSensitive) 
+    return event.ctrlKey && this.shortcut === event.key
+  return event.ctrlKey && this.shortcut === event.key.toLowerCase()
+  }
 }
 
-const focusOnSearchTitleInput = () => {
-  document.getElementById("search-title").focus()
-}
-
-const isSearchTitleShortcutEvent = event => {
-  return event.ctrlKey && SEARCH_INPUT_SHORTCUT_KEY === event.key
-}
-
-const isTitleShortcutEvent = event => {
-  return event.ctrlKey && TITLE_INPUT_SHORTCUT_KEY === event.key
+const searchTitleInput = {
+  id: 'search-title',
+  shortcut: 'e',
+  focus: function() { document.getElementById(this.id).focus()},
+  isShortcutEvent: function ({ event, isCaseSensitive = false}) {
+    if (isCaseSensitive) 
+    return event.ctrlKey && this.shortcut === event.key
+  return event.ctrlKey && this.shortcut === event.key.toLowerCase()
+  }
 }
 
 const preventUnwantedControlKeyDownEvents = () => {
   document.addEventListener('keydown', event => {
-    if (isSearchTitleShortcutEvent(event) || isTitleShortcutEvent(event)) {
+    if (searchTitleInput.isShortcutEvent({event}) 
+          || titleInput.isShortcutEvent({event})) {
       event.preventDefault()
     }
   })
@@ -27,24 +31,24 @@ const preventUnwantedControlKeyDownEvents = () => {
 
 const captureWantedKeyDownEvents = () => {
   document.addEventListener('keydown', (event) => {
-    if (isTitleShortcutEvent(event)) {
-      focusOnTitleInput()
+    if (titleInput.isShortcutEvent({event})) {
+      titleInput.focus()
       return
     }
 
-    if (isSearchTitleShortcutEvent(event)) {
-      focusOnSearchTitleInput()
+    if (searchTitleInput.isShortcutEvent({event})) {
+      searchTitleInput.focus()
       return
     }
   })
 }
 
-const KeyboardShortcutInterptor = {
+const KeyboardShortcutInterceptor = {
 
-  caputureShortcutEvents: () => {
+  captureShortcutEvents: () => {
     preventUnwantedControlKeyDownEvents()
     captureWantedKeyDownEvents()
   }
 }
 
-export default KeyboardShortcutInterptor
+export default KeyboardShortcutInterceptor

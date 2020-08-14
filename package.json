@@ -4,8 +4,7 @@
     "name": "Ariel Alves Dutra",
     "email": "alves.lsn@gmail.com"
   },
-  "version": "0.4.1",
-  "private": true,
+  "version": "0.4.2",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
@@ -16,14 +15,13 @@
     "axios": "^0.18.1",
     "bootstrap": "^4.5.0",
     "i": "^0.3.6",
-    "npm": "^6.14.7",
     "query-string": "^6.13.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
     "react-js-pagination": "^3.0.3",
     "react-redux": "^7.2.0",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^3.4.3",
     "react-spinners": "^0.5.12",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"

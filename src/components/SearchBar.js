@@ -22,7 +22,7 @@ const SearchBar = (props) => {
           <input type="text" name="title" id="search-title" 
               className="searchBar__input"
               placeholder="Pesquisar pelo título..." 
-              title="Pesquise pelo o título. Atalho: Crtl+e"/>
+              title="Pesquise pelo o título. Atalho: Crtl + E"/>
         </span>
         <span className="searchBar__inputSpan">
           <input type="text" name="description" id="search-description"
