@@ -40,6 +40,6 @@ Link [here](https://github.com/arielalvesdutra/post-it-backend).
 
 # Keyboard shorcuts
 
-`Crtl + e`: focuses on input for post-its search by title.
+`Crtl + E`: focuses on input for post-its search by title.
 
-`Ctrl + d`: focuses on input for post-its creation.
+`Ctrl + D`: focuses on input for post-its creation.

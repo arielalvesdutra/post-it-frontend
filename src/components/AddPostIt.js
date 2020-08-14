@@ -31,7 +31,7 @@ const AddPostIt = (props) => {
       <form onSubmit={handleForm} className="addPostIt__form">        
           <span className="addPostIt__span">
             <input name="title" type="text" placeholder="Título do Post-It" 
-                id="title" title="Preencha o título. Atalho: Crtl+d" required/>
+                id="title" title="Preencha o título. Atalho: Crtl + D" required/>
           </span>
           <span className="addPostIt__span">
             <input name="description" type="text" maxLength="500"

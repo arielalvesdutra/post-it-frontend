@@ -7,7 +7,7 @@ import App from './App';
 import KeyboardShortcutInterceptor from './interceptors/keyboard-shortcut-interceptor'
 import store from './redux/store'
 
-KeyboardShortcutInterceptor.caputureShortcutEvents()
+KeyboardShortcutInterceptor.captureShortcutEvents()
 
 ReactDOM.render(
   <Provider store={store}>
