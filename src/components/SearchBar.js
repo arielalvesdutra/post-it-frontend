@@ -5,8 +5,30 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './SearchBar.css'
 import { fetchPostIts } from '../redux/actions/postItsActions';
 
+/**
+ * FOCUS something....
+ */
+const ShortcutEventCapturer = ({ inputId, keyboard, caseSensitive }) => {
+
+}
+
 const SearchBar = (props) => {
   const { onFetchPostIts } = props
+
+  const keyboardShortcut = () => {
+
+    const someInput = {
+      id: 'title',
+      focus: () => {},
+      shortcut: {
+        keyboard: '',
+        caseSensitive: false
+      }
+    }
+    /**
+     * ### Options to capture the keydown
+     */
+  }
 
   function onSubmitSearchForm(event) {
     event.preventDefault()
@@ -22,7 +44,7 @@ const SearchBar = (props) => {
           <input type="text" name="title" id="search-title" 
               className="searchBar__input"
               placeholder="Pesquisar pelo título..." 
-              title="Pesquise pelo o título. Atalho: Crtl+e"/>
+              title="Pesquise pelo o título. Atalho: Crtl + E"/>
         </span>
         <span className="searchBar__inputSpan">
           <input type="text" name="description" id="search-description"

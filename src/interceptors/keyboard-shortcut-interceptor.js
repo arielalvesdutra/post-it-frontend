@@ -1,5 +1,7 @@
-const TITLE_INPUT_SHORTCUT_KEY = 'd'
-const SEARCH_INPUT_SHORTCUT_KEY = 'e'
+const shortcutKeys = {
+  TITLE_INPUT: 'd',
+  SEARCH_INPUT: 'e'
+}
 
 const focusOnTitleInput = () => {
   document.getElementById("title").focus()
@@ -10,11 +12,11 @@ const focusOnSearchTitleInput = () => {
 }
 
 const isSearchTitleShortcutEvent = event => {
-  return event.ctrlKey && SEARCH_INPUT_SHORTCUT_KEY === event.key
+  return event.ctrlKey && shortcutKeys.SEARCH_INPUT === event.key
 }
 
 const isTitleShortcutEvent = event => {
-  return event.ctrlKey && TITLE_INPUT_SHORTCUT_KEY === event.key
+  return event.ctrlKey && shortcutKeys.TITLE_INPUT === event.key
 }
 
 const preventUnwantedControlKeyDownEvents = () => {
@@ -39,12 +41,12 @@ const captureWantedKeyDownEvents = () => {
   })
 }
 
-const KeyboardShortcutInterptor = {
+const KeyboardShortcutInterceptor = {
 
-  caputureShortcutEvents: () => {
+  captureShortcutEvents: () => {
     preventUnwantedControlKeyDownEvents()
     captureWantedKeyDownEvents()
   }
 }
 
-export default KeyboardShortcutInterptor
+export default KeyboardShortcutInterceptor
