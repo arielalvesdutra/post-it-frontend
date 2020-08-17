@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { Card, CardContent, Typography } from '@material-ui/core'
-import { deletePostIt } from '../redux/actions/postItsActions';
+import { deletePostIt } from '../../redux/actions/postItsActions';
 import './PostIt.css'
 
 const style = {

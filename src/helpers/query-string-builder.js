@@ -10,8 +10,8 @@ import queryStringFactory from 'query-string'
 export const buildQueryString = filters => {
 
   if (Object.keys(filters).length) {
-   return '?' + queryStringFactory.stringify(filters)
- }
+    return '?' + queryStringFactory.stringify(filters)
+  }
 
- return ''
+  return ''
 }

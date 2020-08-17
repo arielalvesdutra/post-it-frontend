@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import HeaderContainer from '../../containers/Header'
 import ContentContainer from '../../containers/Content'
-import Pagination from '../../components/Pagination'
-import AddPostIt from '../../components/AddPostIt'
-import ListPostIts from '../../components/ListPostIts'
+import Pagination from '../../components/Pagination/Pagination'
+import AddPostIt from '../../components/AddPostIt/AddPostIt'
+import ListPostIts from '../../components/ListPostIts/ListPostIts'
 import { fetchPostIts } from '../../redux/actions/postItsActions';
 
 const IndexPage = (props) => {

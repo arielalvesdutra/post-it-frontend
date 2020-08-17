@@ -4,7 +4,7 @@
     "name": "Ariel Alves Dutra",
     "email": "alves.lsn@gmail.com"
   },
-  "version": "0.4.2",
+  "version": "0.4.3",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
@@ -26,10 +26,15 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.3",
+    "@testing-library/react": "^10.4.8",
+    "@testing-library/user-event": "^12.1.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom --verbose",
     "eject": "react-scripts eject",
     "dev": "./scripts/dev.sh"
   },

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ClipLoader } from 'react-spinners'
-import PostIt from './PostIt'
+import PostIt from '../PostIts/PostIt'
 import './ListPostIts.css'
 
 const ListPostIts = ({ postIts, isLoading }) => {

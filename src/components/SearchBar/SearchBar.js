@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './SearchBar.css'
-import { fetchPostIts } from '../redux/actions/postItsActions';
+import { fetchPostIts } from '../../redux/actions/postItsActions';
 
 const SearchBar = (props) => {
   const { onFetchPostIts } = props

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PaginationHelper from "react-js-pagination";
-import { fetchPostIts, setCurrentPage } from '../redux/actions/postItsActions';
+import { fetchPostIts, setCurrentPage } from '../../redux/actions/postItsActions';
 import './Pagination.css'
 
 const Pagination = (props) => {
