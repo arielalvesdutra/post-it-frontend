@@ -1,7 +1,7 @@
 import React  from 'react'
 import { connect } from 'react-redux'
-import { createPostIt } from '../redux/actions/postItsActions';
-import Bar from './Bar'
+import { createPostIt } from '../../redux/actions/postItsActions';
+import Bar from '../Bar/Bar'
 import './AddPostIt.css'
 
 const AddPostIt = (props) => {

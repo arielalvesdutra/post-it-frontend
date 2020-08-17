@@ -7,7 +7,7 @@ import {
   SET_FILTERS
 } from '../actions/actionsTypes'
 
-let initialState = {
+export let initialState = {
   currentPage: 1,
   filters: {},
   isLoading:  true,

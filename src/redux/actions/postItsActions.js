@@ -7,7 +7,7 @@ import {
   LOAD_FINISH
 } from './actionsTypes'
 import axios from '../../axios'
-import { buildQueryString } from '../../query-string-builder'
+import { buildQueryString } from '../../helpers/query-string-builder'
 
 
 export const createPostIt = (postIt) => {

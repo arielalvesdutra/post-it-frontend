@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import './index.css';
 import App from './App';
-import KeyboardShortcutInterceptor from './interceptors/keyboard-shortcut-interceptor'
+import KeyboardShortcutInterceptor from './helpers/keyboard-shortcut-interceptor'
 import store from './redux/store'
 
 KeyboardShortcutInterceptor.captureShortcutEvents()
